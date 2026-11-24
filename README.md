@@ -60,8 +60,8 @@ Defined in `lib/database_helper.dart` using `sqflite`:
 ## Technologies
 
 * **Flutter & Dart**
-* **`sqflite`** — Local SQLite database plugin for Android and iOS
-* **`path`** — Cross-platform database file path construction
+* **`sqflite`** :Local SQLite database plugin for Android and iOS
+* **`path`** :Cross-platform database file path construction
 
 ---
 
@@ -91,11 +91,11 @@ flutter run
 
 ## Screenshots
 
-### Phase 1 — Static Screen
+### Phase 1 Static Screen
 
-### Phase 2 — Working List (Before Toggling)
+### Phase 2 Working List (Before Toggling)
 
-### Phase 2 — Working List (After Toggling)
+### Phase 2 Working List (After Toggling)
 
 ---
 
