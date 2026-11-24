@@ -3,8 +3,6 @@
 A Flutter mobile application that helps students organize, plan, and track their study goals. Students can view their subjects and planned study hours, mark goals as completed with strike-through styling, delete items, and add new goals.
 
 ---
-
-## Features
 ## Features
 - View a clean list of study goals displaying each subject name and planned study hours (`Mathematics`, `Flutter`, `Networks`)
 - Mark any goal as completed (with strike-through styling) or undo it by tapping the checkbox or goal tile
