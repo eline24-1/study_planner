@@ -1,4 +1,3 @@
-```markdown
 # My Study Planner
 
 A Flutter mobile application that helps students organize, plan, and track their study goals. Students can view their subjects and planned study hours, mark goals as completed with strike-through styling, delete items, and add new goals dynamically.
