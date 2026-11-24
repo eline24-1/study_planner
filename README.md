@@ -5,14 +5,13 @@ A Flutter mobile application that helps students organize, plan, and track their
 ---
 
 ## Features
-- View study goals showing subject name and planned study hours
-- Mark a goal as done (with strike-through styling) or undo it by tapping the checkbox or tile
-- Delete a goal using the delete icon button
-- Add a new goal using the `+` FloatingActionButton
-- Reactive UI updates powered by `setState()`
-- SQLite database schema and CRUD helper functions (`initDatabase`, `insertGoal`, `getGoals`, `updateGoal`, `deleteGoal`) via `sqflite`
-
----
+## Features
+- View a clean list of study goals displaying each subject name and planned study hours (`Mathematics`, `Flutter`, `Networks`)
+- Mark any goal as completed (with strike-through styling) or undo it by tapping the checkbox or goal tile
+- Delete a goal from the list using the trash icon button
+- Add a new sample study goal dynamically via the `+` FloatingActionButton
+- Instant, reactive UI updates powered by `setState()`
+- SQLite database schema and CRUD helper functions (initDatabase, insertGoal, getGoals, updateGoal, deleteGoal) via sqflite
 
 ## Project Phases
 
