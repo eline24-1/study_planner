@@ -67,25 +67,10 @@ Defined in `lib/database_helper.dart` using `sqflite`:
 
 1. **Set Up Your Environment:** Install Flutter and Android Studio (or VS Code), and configure an Android emulator or physical device.
 2. **Create or Open the Project:**
-```bash
-flutter create study_planner
-cd study_planner
-
-```
 
 
 3. **Add Project Files:** Place `main.dart` and `database_helper.dart` inside the `lib/` folder, and ensure `sqflite` and `path` are listed in `pubspec.yaml`.
 4. **Install Packages & Run:**
-```bash
-flutter pub get
-flutter run
-
-```
-
-
-*(Note: `sqflite` targets Android and iOS devices/emulators rather than Chrome or Windows desktop.)*
-
----
 
 ## Screenshots
 
