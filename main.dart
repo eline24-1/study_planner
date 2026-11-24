@@ -17,10 +17,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// ---------------------------------------------------------------
 // SCREEN 1: the list (StatefulWidget because the data changes)
-// ---------------------------------------------------------------
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -49,8 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
       goals.removeAt(index);
     });
   }
-
-  // LOGIC: add a sample goal (the real form comes in a later phase)
+  // LOGIC: add a sample goal 
   void addSampleGoal() {
     setState(() {
       goals.add({
@@ -64,12 +60,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // STATIC: top bar
+      // top bar
       appBar: AppBar(title: const Text('My Study Planner')),
 
       body: Column(
         children: [
-          // STATIC: heading above the list
+          // heading above the list
           const Padding(
             padding: EdgeInsets.all(16),
             child: Text(
@@ -78,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // CONNECTION 1: the list is built from the data
+          // connection 1: the list is built from the data
           Expanded(
             child: ListView.builder(
               itemCount: goals.length,
@@ -112,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
 
-      // CONNECTION 2: the button calls the logic (adds a sample goal)
+      //connection 2: the button calls the logic (adds a sample goal)
       floatingActionButton: FloatingActionButton(
         onPressed: addSampleGoal,
         child: const Icon(Icons.add),
