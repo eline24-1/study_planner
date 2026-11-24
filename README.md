@@ -2,8 +2,6 @@
 
 A Flutter mobile application that helps students organize, plan, and track their study goals. Students can view their subjects and planned study hours, mark goals as completed with strike-through styling, delete items, and add new goals.
 
-Built for the **Mobile App Development (Dart & Flutter)** course at the **University of Lay Adventists of Kigali (UNILAK)**.
-
 ---
 
 ## Features
