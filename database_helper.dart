@@ -1,9 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-Database? _db; // The shared open database
-
-// Initialize the database
+Database? _db; 
 Future<void> initDatabase() async {
   final dbPath = await getDatabasesPath();
   final path = join(dbPath, 'goals.db');
@@ -23,8 +21,6 @@ Future<void> initDatabase() async {
     },
   );
 }
-
-// Insert a new goal and return its ID
 Future<int> insertGoal(Map<String, dynamic> goal) async {
   return await _db!.insert('goals', {
     'subject': goal['subject'],
@@ -33,7 +29,6 @@ Future<int> insertGoal(Map<String, dynamic> goal) async {
   });
 }
 
-// Retrieve all goals from the database
 Future<List<Map<String, dynamic>>> getGoals() async {
   final rows = await _db!.query('goals');
   return rows.map((row) => {
@@ -44,7 +39,6 @@ Future<List<Map<String, dynamic>>> getGoals() async {
   }).toList();
 }
 
-// Update the completion status of a goal
 Future<void> updateGoal(int id, bool done) async {
   await _db!.update(
     'goals',
@@ -53,8 +47,6 @@ Future<void> updateGoal(int id, bool done) async {
     whereArgs: [id],
   );
 }
-
-// Delete a goal by its ID
 Future<void> deleteGoal(int id) async {
   await _db!.delete(
     'goals',
