@@ -37,11 +37,10 @@ study_planner/
 ├── pubspec.yaml               # Project configuration and Flutter dependencies
 └── README.md                  # Project documentation and group details
 
-
-![Phase 1](phase1.png)
-![Phase 2 before](phase2_before.png)
-![Phase 2 after](phase2_after.png)
-
+Screenshots
+Phase 1 — Static Screen
+Phase 2 — Before Toggling
+Phase 2 — After Toggling
 ## How to run
 1. Install Flutter and Android Studio.
 2. Create a Flutter project named `study_planner`.
