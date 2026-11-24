@@ -23,6 +23,21 @@ it, and the + button adds a sample goal. Every change goes through setState().
 Code: `phase2/main.dart` - Screenshots: `screenshots/phase2_before.png`,
 `screenshots/phase2_after.png`
 
+## Project Structure
+```text
+study_planner/
+├── phase1/
+│   └── main.dart              # Phase 1: Static UI screen (StatelessWidget & hard-coded cards)
+├── phase2/
+│   └── main.dart              # Phase 2: Reactive list (StatefulWidget, ListView.builder & setState)
+├── screenshots/
+│   ├── phase1.png             # Screenshot of the static screen
+│   ├── phase2_before.png      # Screenshot before toggling/adding goals
+│   └── phase2_after.png       # Screenshot after toggling completion & updating list
+├── pubspec.yaml               # Project configuration and Flutter dependencies
+└── README.md                  # Project documentation and group details
+
+
 ![Phase 1](phase1.png)
 ![Phase 2 before](phase2_before.png)
 ![Phase 2 after](phase2_after.png)
