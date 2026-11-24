@@ -26,14 +26,14 @@ A Flutter mobile application that helps students organize, plan, and track their
 ```text
 study_planner/
 ├── lib/
-│   ├── main.dart              # UI screens, state management, and STATIC / LOGIC / CONNECTION comments
-│   └── database_helper.dart   # SQLite database initialization and CRUD functions (sqflite)
+│   ├── main.dart              UI screens, state management, and STATIC / LOGIC / CONNECTION comments
+│   └── database_helper.dart   SQLite database initialization and CRUD functions (sqflite)
 ├── screenshots/
-│   ├── phase1.png             # Screenshot of Phase 1 static screen
-│   ├── phase2_before.png      # Screenshot before toggling/adding goals
-│   └── phase2_after.png       # Screenshot after toggling completion & updating list
-├── pubspec.yaml               # Project dependencies (flutter, sqflite, path)
-└── README.md                  # Project documentation and group details
+│   ├── phase1.png             creenshot of Phase 1 static screen
+│   ├── phase2_before.png      Screenshot before toggling/adding goals
+│   └── phase2_after.png       Screenshot after toggling completion & updating list
+├── pubspec.yaml               Project dependencies (flutter, sqflite, path)
+└── README.md                  Project documentation and group details
 
 ```
 
