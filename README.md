@@ -23,9 +23,9 @@ it, and the + button adds a sample goal. Every change goes through setState().
 Code: `phase2/main.dart` - Screenshots: `screenshots/phase2_before.png`,
 `screenshots/phase2_after.png`
 
-![Phase 1](screenshots/phase1.png)
-![Phase 2 before](screenshots/phase2_before.png)
-![Phase 2 after](screenshots/phase2_after.png)
+![Phase 1](phase1.png)
+![Phase 2 before](phase2_before.png)
+![Phase 2 after](phase2_after.png)
 
 ## How to run
 1. Install Flutter and Android Studio.
