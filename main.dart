@@ -11,15 +11,55 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My Study Planner',
       home: HomeScreen(),
     );
   }
 }
 
-// STATIC: main screen
-class HomeScreen extends StatelessWidget {
+// ---------------------------------------------------------------
+// SCREEN 1: the list (StatefulWidget because the data changes)
+// ---------------------------------------------------------------
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  // LOGIC: the data (a list of maps: subject, hours, done)
+  final List<Map<String, dynamic>> goals = [
+    {'subject': 'Mathematics', 'hours': 5, 'done': false},
+    {'subject': 'Flutter', 'hours': 8, 'done': false},
+    {'subject': 'Networks', 'hours': 3, 'done': false},
+  ];
+
+  // LOGIC: mark a goal as done / not done
+  void toggleGoal(int index) {
+    setState(() {
+      goals[index]['done'] = !goals[index]['done'];
+    });
+  }
+
+  // LOGIC: remove a goal from the list
+  void deleteGoal(int index) {
+    setState(() {
+      goals.removeAt(index);
+    });
+  }
+
+  // LOGIC: add a sample goal (the real form comes in a later phase)
+  void addSampleGoal() {
+    setState(() {
+      goals.add({
+        'subject': 'New goal ${goals.length + 1}',
+        'hours': 2,
+        'done': false,
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +68,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('My Study Planner')),
 
       body: Column(
-        children: const [
+        children: [
           // STATIC: heading above the list
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(16),
             child: Text(
               'My Goals',
@@ -38,31 +78,43 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // STATIC: hard-coded goal cards
-          Card(
-            child: ListTile(
-              title: Text('Mathematics'),
-              subtitle: Text('5 hours'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text('Flutter'),
-              subtitle: Text('8 hours'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text('Networks'),
-              subtitle: Text('3 hours'),
+          // CONNECTION 1: the list is built from the data
+          Expanded(
+            child: ListView.builder(
+              itemCount: goals.length,
+              itemBuilder: (context, index) {
+                final goal = goals[index];
+                return Card(
+                  child: ListTile(
+                    leading: Checkbox(
+                      value: goal['done'],
+                      onChanged: (_) => toggleGoal(index),
+                    ),
+                    title: Text(
+                      goal['subject'],
+                      style: TextStyle(
+                        decoration: goal['done']
+                            ? TextDecoration.lineThrough
+                            : null,
+                      ),
+                    ),
+                    subtitle: Text('${goal['hours']} hours'),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete),
+                      onPressed: () => deleteGoal(index),
+                    ),
+                    onTap: () => toggleGoal(index),
+                  ),
+                );
+              },
             ),
           ),
         ],
       ),
 
-      // STATIC: floating button (does nothing yet)
+      // CONNECTION 2: the button calls the logic (adds a sample goal)
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: addSampleGoal,
         child: const Icon(Icons.add),
       ),
     );
